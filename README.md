@@ -1,2 +1,2 @@
-# Mingle-Data-Issues
-Analysis of missing data in Mingle
+# Mingle-Data-Preparation
+Preparation of data extracted from Mingle.
