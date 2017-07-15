@@ -99,13 +99,7 @@ rawBSUC <- rawBSUC %>% mutate(size = BSUCSize) #adding size to BSUCS
 leadTime <- ymd(rawBSUC$moved_to_context_verified_on) - ymd(rawBSUC$moved_to_ongoing_on) 
 rawBSUC <- rawBSUC %>% mutate(lead_time = leadTime)
 
-#The following BSUCS have issues with dates
-# [1] "HV85240 SDDIT CHA D1720: CHA Internal Server Error for reading Refill Profiles through COBA" (No product for this one either)
 
-# [2] "CPM_FT25-1: Threshold Triggered Promotion for Accumulated Service Usage, Activation of Bundled Promotion Product - CPM impact"
-# [3] "CPM_FT25-4: Threshold Triggered Promotion Generates Promotion Notification"                                                   
-# [4] "CPM_4B-10 One-time Charge for activation at first traffic event _Testdata"                                                    
-# [5] "CPM_FT25-1:2 Product Status Notification Event enhancement with Unique Id"
 # rawBSUC <- rawBSUC[rawBSUC$product != "",]
 
 #Not possible to collect full lead-time yet, since many BSUCS don't have an associate BUC
